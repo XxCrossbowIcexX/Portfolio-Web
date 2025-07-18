@@ -13,14 +13,20 @@
 </head>
 
 <body>
+  <!-- #region Header -->
   <header class="headerNav">
-    <ul>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Ícono hamburguesa -->
+    <ul id="menu">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#sobreMi">Sobre Mi</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
   </header>
+
+  <!-- #endregion Header -->
+
 
   <main id="inicio" class="contenedor">
 
@@ -142,6 +148,26 @@
       </div>
     </section>
     <!-- #endregion Sección de proyectos -->
+
+    <!-- #region Sección de contacto -->
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <div class="contenidoContacto">
+        <p>Si deseas contactarme, puedes rellenar el siguiente formulario
+        <form class="formularioContacto" action="mailto:" method="post">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Teléfono:</label>
+          <input type="tel" id="phone" name="phone" required>
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="subject">Asunto:</label>
+          <input type="text" id="subject" name="subject" required>
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
   </main>
 
   <!-- #region Pie de Página -->
@@ -167,5 +193,7 @@
   </footer>
   <!-- #endregion Pie de Página -->
 </body>
+
+<script src="src/js/script.js"></script>
 
 </html>
