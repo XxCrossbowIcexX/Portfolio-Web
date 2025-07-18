@@ -1,0 +1,354 @@
+:root {
+  --color_oscuro_bg: #1a1a2e;
+  --color_oscuro_bg_2: #16213e;
+  --color_oscuro_bg_2a: #16213ecc;
+  --color_texto_claro: #e0e0e0;
+  --color_primario: #0f3460;
+  --color_secundario: #e94560;
+  --color_secundario_a: #e9456099;
+
+  --borde_radio: 12px;
+  --padding_seccion: 60px 20px;
+  --ancho_max: 1200px;
+  --fuente_principal: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--fuente_principal);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color_oscuro_bg);
+  color: var(--color_texto_claro);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Estilos para el fondo de estrellas en movimiento */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Asegura que esté detrás del contenido */
+  background:
+    /* Estrellas pequeñas */ radial-gradient(
+      2px 2px at 20px 30px,
+      #eee,
+      transparent
+    ),
+    radial-gradient(2px 2px at 80px 70px, #eee, transparent),
+    radial-gradient(2px 2px at 150px 10px, #eee, transparent),
+    radial-gradient(2px 2px at 200px 90px, #eee, transparent),
+    radial-gradient(2px 2px at 250px 40px, #eee, transparent),
+    radial-gradient(2px 2px at 300px 80px, #eee, transparent),
+    radial-gradient(2px 2px at 350px 20px, #eee, transparent),
+    radial-gradient(2px 2px at 400px 60px, #eee, transparent),
+    radial-gradient(2px 2px at 450px 5px, #eee, transparent),
+    radial-gradient(2px 2px at 500px 75px, #eee, transparent),
+    radial-gradient(2px 2px at 550px 15px, #eee, transparent),
+    radial-gradient(2px 2px at 600px 95px, #eee, transparent),
+    radial-gradient(2px 2px at 650px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 700px 85px, #eee, transparent),
+    radial-gradient(2px 2px at 750px 50px, #eee, transparent),
+    radial-gradient(2px 2px at 800px 10px, #eee, transparent),
+    radial-gradient(2px 2px at 850px 70px, #eee, transparent),
+    radial-gradient(2px 2px at 900px 25px, #eee, transparent),
+    radial-gradient(2px 2px at 950px 80px, #eee, transparent),
+    radial-gradient(2px 2px at 1000px 45px, #eee, transparent),
+    /* Estrellas medianas */
+      radial-gradient(3px 3px at 100px 50px, #ddd, transparent),
+    radial-gradient(3px 3px at 300px 10px, #ddd, transparent),
+    radial-gradient(3px 3px at 500px 90px, #ddd, transparent),
+    radial-gradient(3px 3px at 700px 30px, #ddd, transparent),
+    radial-gradient(3px 3px at 900px 70px, #ddd, transparent),
+    /* Estrellas grandes */
+      radial-gradient(4px 4px at 250px 20px, #ccc, transparent),
+    radial-gradient(4px 4px at 650px 80px, #ccc, transparent);
+
+  /* Ajusta el tamaño para que las estrellas se repitan */
+  background-size: 1000px 1000px, 1000px 1000px, 1000px 1000px;
+
+  /* Animación de movimiento */
+  animation: moveStars 100s linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    background-position: 0 0, 0 0, 0 0;
+  }
+
+  to {
+    background-position: 1000px 1000px, -1000px 1000px, 1000px -1000px;
+  }
+}
+
+#sobreMi,
+#inicio,
+#habilidades,
+#proyectos {
+  scroll-margin-top: 60px;
+}
+
+.contenedor {
+  max-width: var(--ancho_max);
+  margin: 0 auto;
+  padding: var(--padding_seccion);
+}
+
+.headerNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 20px 30px;
+  background-color: var(--color_oscuro_bg_2a);
+  border-top: 2px solid var(--color_primario);
+  border-radius: 0 0 var(--borde_radio) var(--borde_radio);
+  box-shadow: 0 -8px 16px #00000066;
+}
+
+.headerNav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  padding: 0;
+}
+
+.headerNav ul li {
+  display: inline;
+}
+
+.headerNav ul li a {
+  color: var(--color_secundario);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.headerNav ul li a:hover {
+  color: var(--color_texto_claro);
+}
+
+.header {
+  margin-top: 80px;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--color_oscuro_bg_2a);
+  border-bottom: 2px solid var(--color_primario);
+  border-radius: var(--borde_radio);
+  margin-bottom: 40px;
+  box-shadow: 0 8px 16px #00000066;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--color_secundario);
+  text-shadow: 2px 2px 4px #00000080;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+.seccion {
+  background-color: var(--color_oscuro_bg_2);
+  padding: var(--padding_seccion);
+  margin-bottom: 40px;
+  border-radius: var(--borde_radio);
+  box-shadow: 0 6px 12px #0000004d;
+  border: 1px solid var(--color_primario);
+}
+
+.seccion h2 {
+  font-size: 2.5rem;
+  color: var(--color_secundario);
+  text-align: center;
+  margin: 0 auto 30px auto;
+  border-bottom: 3px solid var(--color_secundario);
+  padding-bottom: 10px;
+  display: inline-block;
+  width: auto;
+}
+
+.contenidoSobreMi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contenidoSobreMi img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--color_primario);
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px var(--color_secundario_a);
+}
+
+.contenidoSobreMi p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gridHabilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.habilidad {
+  background-color: var(--color_oscuro_bg);
+  padding: 20px;
+  border-radius: var(--borde_radio);
+  border: 1px solid var(--color_secundario);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px #00000033;
+}
+
+.habilidad:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px #0000004d, 0 0 20px var(--color_secundario);
+}
+
+.habilidad h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.habilidad p {
+  font-size: 0.95rem;
+}
+
+.gridProyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tarjetaProyecto {
+  background-color: var(--color_oscuro_bg);
+  border-radius: var(--borde_radio);
+  overflow: hidden;
+  border: 1px solid var(--color_secundario);
+  box-shadow: 0 6px 12px #00000033;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarjetaProyecto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px #00000080, 0 0 25px var(--color_secundario);
+}
+
+.tarjetaProyecto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color_secundario);
+}
+
+.contenidoTarjeta {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contenidoTarjeta h3 {
+  color: var(--color_secundario);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.contenidoTarjeta p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.linkProyecto {
+  display: inline-block;
+  background-color: var(--color_primario);
+  color: var(--color_texto_claro);
+  padding: 10px 20px;
+  margin-top: auto;
+  width: fit-content;
+  border-radius: var(--borde_radio);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid var(--color_secundario);
+}
+
+.linkProyecto:hover {
+  background-color: var(--color_secundario);
+  transform: translateY(-3px);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 30px;
+  background-color: var(--color_oscuro_bg_2a);
+  border-top: 2px solid var(--color_primario);
+  border-radius: var(--borde_radio);
+  margin-top: 40px;
+  box-shadow: 0 -8px 16px #00000066;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.redesSociales {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.iconoRedes {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px #00000033;
+}
+
+.iconoRedes:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px #0000004d, 0 5px 10px var(--color_secundario_a);
+}
+
+.iconoRedes img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.iconoRedes i {
+  font-size: 2rem;
+  color: var(--color_secundario);
+}
+.iconoRedes:hover i {
+  color: var(--color_texto_claro);
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}

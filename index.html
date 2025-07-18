@@ -1,129 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Pagina web de Portafólio de Braien Bordagorri">
-    <title>Braien Bordagorri Portfolio</title>
 
-    <link rel="preload" href="./normalize.css" as="style" />
-    <link rel="stylesheet" href="./normalize.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porfolio Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="/src/lib/fontawesome-free-6.7.2-web/css/fontawesome.css" rel="stylesheet" />
+  <link href="/src/lib/fontawesome-free-6.7.2-web/css/brands.css" rel="stylesheet" />
+  <link href="/src/lib/fontawesome-free-6.7.2-web/css/solid.css" rel="stylesheet" />
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Roboto+Mono:wght@400;700&display=swap"
-      rel="stylesheet"/>
+<body>
+  <header class="headerNav">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobreMi">Sobre Mi</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+    </ul>
+  </header>
 
-    <link rel="preload" href="styles.css" as="style" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
+  <main id="inicio" class="contenedor">
 
-  <body>
-    <header class="header">
-      <a class="header__enlace" href="index.html">
-        <h1 class="header__titulo">
-          Braien Bordagorri <span class="header__titulo--span">Portfolio</span>
-        </h1>
+    <!-- #region Encabezado -->
+    <section class="header">
+      <h1>¡Hola, soy Braien Bordagorri!</h1>
+      <p>Desarrollador Web | Desarrollador de Software | Apasionado por la Tecnología</p>
+    </section>
+    <!-- #endregion Encabezado -->
+
+    <!-- #region Sección sobre mi -->
+    <section id="sobreMi" class="seccion">
+      <h2>Sobre mí</h2>
+      <div class="contenidoSobreMi">
+        <img src="src/img/fotoPerfil.jpg" class="fotoPerfil" />
+        <p>Soy un desarrollador web con experiencia en la creación de aplicaciones y sitios web modernos. Me apasiona
+          aprender nuevas tecnologías y mejorar mis habilidades constantemente.</p>
+      </div>
+    </section>
+    <!-- #endregion Sección sobre mi -->
+
+    <!-- Sección de habilidades -->
+    <section id="habilidades" class="seccion">
+      <h2>Mis Habilidades</h2>
+      <div class="gridHabilidades">
+        <div class="habilidad">
+          <h3>HTML</h3>
+          <p>Estructuración semántica, no semántica y accesible de contenido web.</p>
+        </div>
+        <div class="habilidad">
+          <h3>CSS</h3>
+          <p>Diseño responsivo, animaciones, transiciones y estilos modernos.</p>
+        </div>
+        <div class="habilidad">
+          <h3>JavaScript</h3>
+          <p>Desarrollo de interactividad y lógica del lado del cliente.</p>
+        </div>
+        <div class="habilidad">
+          <h3>C#</h3>
+          <p>Desarrollo de aplicaciones de escritorio.</p>
+        </div>
+        <div class="habilidad">
+          <h3>GDScript</h3>
+          <p>Desarrollo de videojuegos con el motor Godot.</p>
+        </div>
+        <div class="habilidad">
+          <h3>Responsive Design</h3>
+          <p>Creación de sitios web que se adaptan a diferentes dispositivos y tamaños de pantalla.</p>
+        </div>
+        <div class="habilidad">
+          <h3>Git</h3>
+          <p>Control de versiones y colaboración en proyectos de desarrollo.</p>
+        </div>
+      </div>
+    </section>
+    <!-- #endregion Sección de habilidades -->
+
+    <!-- #region Sección de proyectos -->
+    <section id="proyectos" class="seccion">
+      <h2>Mis Proyectos</h2>
+      <div class="gridProyectos">
+        <div class="tarjetaProyecto">
+          <img src="src/img/pandaWeb.png" />
+          <div class="contenidoTarjeta">
+            <h3>Panda Web</h3>
+            <p>Catálogo de productos del Free Shop Panda - Río Branco.</p>
+            <a href="https://pandauy.com/" target="_blank" class="linkProyecto">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="tarjetaProyecto">
+          <img src="src/img/tsOnline.png" />
+          <div class="contenidoTarjeta">
+            <h3>Tipical Shooter Online</h3>
+            <p>Juego de disparos multijugador creado en Godot y subido a GitHub.</p>
+            <a href="https://github.com/XxCrossbowIcexX/TipicalShooter" target="_blank" class="linkProyecto">Ver
+              Proyecto</a>
+          </div>
+        </div>
+
+        <div class="tarjetaProyecto">
+          <img src="src/projects/Festival Musica 2023/build/img/imagen_vocalista.webp" />
+          <div class="contenidoTarjeta">
+            <h3>Rock & EDM Festival 2023</h3>
+            <p>Festival de Rock & EDM en 2023, en Río Branco - Cerro Largo - Uruguay, aquí se viene a disfrutar de la
+              buena Música.</p>
+            <a href="src/projects/Festival Musica 2023/index.html" target="_blank" class="linkProyecto">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="tarjetaProyecto">
+          <img src="src/projects/Blog de Café Web/img/blog2.webp" />
+          <div class="contenidoTarjeta">
+            <h3>Blog de Café</h3>
+            <p>Blog de Café es un proyecto que habla sobre el café y tiene cursos grátis pero los cupos son limitados.
+            </p>
+            <a href="src/projects/Blog de Café Web/index.html" target="_blank" class="linkProyecto">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="tarjetaProyecto">
+          <img src="src/projects/FrontEnd Store Web/img/grafico1.jpg" />
+          <div class="contenidoTarjeta">
+            <h3>FrontEnd Store</h3>
+            <p>Tienda de remeras de las marcas de algunos lenguajes y framework.</p>
+            <a href="src/projects/FrontEnd Store Web/index.html" target="_blank" class="linkProyecto">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="tarjetaProyecto">
+          <img src="src/projects/Freelancer Web/img/hero.jpg" />
+          <div class="contenidoTarjeta">
+            <h3>Freelancer</h3>
+            <p>Mi primer proyecto como Freelancer.</p>
+            <a href="src/projects/Freelancer Web/index.html" target="_blank" class="linkProyecto">Ver Proyecto</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- #endregion Sección de proyectos -->
+  </main>
+
+  <!-- #region Pie de Página -->
+  <footer class="footer">
+    <p>© 2023 Braien Bordagorri - BradithanApps. Todos los derechos reservados.</p>
+    <section class="redesSociales">
+      <a href="https://github.com/XxCrossbowIcexX" target="_blank" class="iconoRedes">
+        <i class="fa-brands fa-square-github"></i>
       </a>
-      <nav class="navegacion">
-        <a href="about.html">Acerca de mi</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-    </header>
+      <a href="https://www.linkedin.com/in/braien-bordagorri-26198a2a5/" target="_blank" class="iconoRedes">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/braienxD" target="_blank" class="iconoRedes">
+        <i class="fa-brands fa-square-facebook"></i>
+      </a>
+      <a href="https://www.instagram.com/braienbordagorri/" target="_blank" class="iconoRedes">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/59891524216" target="_blank" class="iconoRedes">
+        <i class="fa-brands fa-square-whatsapp"></i>
+      </a>
+    </section>
+  </footer>
+  <!-- #endregion Pie de Página -->
+</body>
 
-    <main class="contenedor sombra centrar-texto">
-      <h2 class="contenedor__titulo no-margin">Ultimos Proyectos</h2>
-
-      <article class="contenido-principal sombra">
-        <div class="contenido-principal__imagen">
-          <img
-            src="./Festival Musica 2023/build/img/imagen_vocalista.jpg"
-            alt="Imagen Ultimo Proyecto"
-          />
-        </div>
-        <div contenido-principal__texto>
-          <h3 class="no-margin no-padding">Rock & EDM Festival 2023</h3>
-          <p class="no-margin no no-padding">
-            Festival de Rock & EDM en 2023, en Río Branco - Cerro Largo - Uruguay,
-            aquí se viene a disfrutar de la buena Música
-          </p>
-        </div>
-        <a class="boton boton-primario" href="./Festival Musica 2023/index.html">
-          Leer más...
-        </a>
-      </article>
-
-      <article class="contenido sombra">
-        <div class="contenido__imagen">
-          <img
-            src="./Blog de Café Web/img/banner.jpg"
-            alt="Imagen del Proyecto"
-          />
-        </div>
-        <div contenido__texto>
-          <h3 class="no-margin no-padding contenido__texto--titulo">
-            Blog de Café
-          </h3>
-          <p class="no-margin no no-padding">
-            Blog de Café es un proyecto que habla sobre el café y tiene cursos
-            grátis pero los cupos son limitados
-          </p>
-        </div>
-        <a class="boton boton-primario" href="./Blog de Café Web/index.html">
-          Leer más...
-        </a>
-      </article>
-
-      <article class="contenido sombra">
-        <div class="contenido__imagen">
-          <img
-            src="./FrontEnd Store Web/img/logo.png"
-            alt="Imagen del Proyecto"
-          />
-        </div>
-        <div contenido__texto>
-          <h3 class="no-margin no-padding contenido__texto--titulo">
-            FrontEnd Store
-          </h3>
-          <p class="no-margin no no-padding">
-            Tienda de remeras de las marcas de algunos lenguajes y framework
-          </p>
-        </div>
-        <a class="boton boton-primario" href="./FrontEnd Store Web/index.html">
-          Leer más...
-        </a>
-      </article>
-
-      <article class="contenido sombra">
-        <div class="contenido__imagen">
-          <img src="./Freelancer Web/img/hero.jpg" alt="Imagen del Proyecto" />
-        </div>
-        <div contenido__texto>
-          <h3 class="no-margin no-padding contenido__texto--titulo">
-            Freelancer
-          </h3>
-          <p class="no-margin no no-padding">
-            Mi primer proyecto como Freelancer
-          </p>
-        </div>
-        <a class="boton boton-primario" href="./Freelancer Web/index.html">
-          Leer más...
-        </a>
-      </article>
-
-      <aside class="sidebar-1 sombra">
-        <h3 class="centrar-texto no-margin">Actualizaciones</h3>
-      </aside>
-    </main>
-
-    <footer class="footer">
-      <p>
-        Todos los derechos reservados
-        <span> &copy; 2023 | Bradithan Apps. </span>
-      </p>
-    </footer>
-  </body>
 </html>
