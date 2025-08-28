@@ -99,6 +99,10 @@ body::before {
 }
 
 @media (max-width: 768px) {
+  body::before {
+    background: transparent;
+  }
+  
   #menu {
     flex-direction: column;
     background-color: var(--color_oscuro_bg_2a);
